@@ -1,0 +1,2 @@
+# Remote ssh many machines to do something
+cat /etc/hosts |grep controller |awk '{print $2}' | while read line ;do ssh $line 'pkill -9 mysql' </dev/null;done
